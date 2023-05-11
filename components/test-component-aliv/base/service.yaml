@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-component-aliv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-component-aliv
+    app.kubernetes.io/part-of: test-app-yglv
+  name: test-component-aliv
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: test-component-aliv
+status:
+  loadBalancer: {}
